@@ -1,0 +1,23 @@
+<%= content_for :page_title, 'Sign in - Game Clips' %>
+
+<div class="row-fluid">
+  <div class="span4 well">
+    <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+      <%= field_set_tag 'Sign in' do %>
+        <%= f.label :email %>
+        <%= f.email_field :email, :autofocus => true %>
+
+        <%= f.label :password %>
+        <%= f.password_field :password %>
+
+        <% if devise_mapping.rememberable? -%>
+          <div><%= f.label :remember_me %> <%= f.check_box :remember_me %></div>
+        <% end -%>
+
+        <%= f.submit "Sign in" %>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+
+<%= render "devise/shared/links" %>

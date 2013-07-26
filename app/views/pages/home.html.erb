@@ -1,0 +1,23 @@
+<%= content_for :page_title, 'Home - Game Clips' %>
+<% if user_signed_in? %>
+  <div class="row-fluid">
+    <aside class="span2">
+      <%= image_tag current_user.profile.avatar.url(:thumb) %>
+      <%= current_user.profile.name %>
+      <%= link_to "Upload Clip", new_screen_path, class: "btn btn-primary btn-large" %>
+    </aside>
+    <%= link_to "Sign out", destroy_user_session_path, :method => :delete, class: "btn btn-primary btn-warning" %>
+    <%= link_to "Edit Profile", edit_user_registration_path, class: "btn btn-primary btn-warning" %>
+  </div>
+<% else %>
+  <div class="row-fluid">
+    <section class="span4 offset3">
+      <%= image_tag("home.jpg", :style => "width:300px; height:300px;") %>
+    </section>
+    
+    <section class="span4 offset1" style="padding-top:80px">
+      <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-large" %> or
+      <%= link_to "Sign in", new_user_session_path, class: "btn btn-primary btn-large" %>
+    </section>
+  </div>
+<% end %>
