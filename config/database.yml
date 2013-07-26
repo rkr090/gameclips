@@ -26,6 +26,6 @@ production:
   encoding: unicode
   database: gc_production
   pool: 5
-  username: rohit
-  password: th1sisjustaLongpassword
+  username: 
+  password: 
   host: localhost

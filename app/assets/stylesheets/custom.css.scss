@@ -1,15 +1,37 @@
 @import "bootstrap";
 @import "bootstrap-responsive";
 
-body {  padding-top: 60px; }
+body {
+  padding-top: 80px;
+  text-decoration: none !important;
+  
+}
 
 /* footer */
 
-footer {
+header, footer {
   position: fixed;
-  bottom: 0;
 }
 
+header { top: 0; padding-top: 10px;}
+footer { bottom: 0; }
+
+header a {
+
+  height: 20px;
+  overflow: auto;
+      
+  text-decoration: none;
+  color: #999;
+  font: 15px/1 Helvetica, Verdana, sans-serif;
+  text-transform: uppercase;
+ 
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease
+}
 
 ul {
   overflow: auto;
@@ -51,11 +73,22 @@ li.active a {
 
 /* fancy-line */
 
-.fancy-line { 
+.fancy-line-rtl { 
     display: block;
     border: none;
     color: white;
     height: 1px;
+    margin: 10px 0;
     background: black;
     background: -webkit-gradient(radial, 100% 50%, 0, 50% 50%, 250, from(#000), to(#fff));
+}
+
+.fancy-line-ltr { 
+    display: block;
+    border: none;
+    color: white;
+    height: 1px;
+    margin: 10px 0;
+    background: black;
+    background: -webkit-gradient(radial, 0% 50%, 0, 50% 50%, 250, from(#000), to(#fff));
 }
