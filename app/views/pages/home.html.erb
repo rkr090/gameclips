@@ -5,6 +5,9 @@
       <%= image_tag current_user.profile.avatar.url(:thumb) %>
       <%= current_user.profile.name %>
       <%= link_to "Upload Clip", new_screen_path, class: "btn btn-primary btn-large" %>
+      <% current_user.screens.each do |scr| %>
+      <%= image_tag scr.image.url %>
+      <% end %>  
     </aside>
     <%= link_to "Sign out", destroy_user_session_path, :method => :delete, class: "btn btn-primary btn-warning" %>
     <%= link_to "Edit Profile", edit_user_registration_path, class: "btn btn-primary btn-warning" %>
