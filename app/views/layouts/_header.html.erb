@@ -1,5 +1,9 @@
-<header class="container-fluid row-fluid">
-  <%= link_to "Game Clips", root_path %>
-  <hr class="fancy-line-ltr2"></hr>
-  <hr class="fancy-line-ltr1"></hr>
+<header class="navbar navbar-fixed-top" style="background-color: #3f3f3f">
+  <%= link_to "Game Clips", root_path, class: "navbar-brand" %>
+  <% if user_signed_in? %>
+    <ul class="nav navbar-nav pull-right">
+      <%= link_to "Sign out", destroy_user_session_path, :method => :delete, class: "btn btn-default navbar-btn" %>
+      <%= link_to "Edit Profile", edit_user_registration_path, class: "btn btn-default navbar-btn" %>
+    </ul>
+  <% end %>
 </header>

@@ -1,50 +1,32 @@
 @import "bootstrap";
-@import "bootstrap-responsive";
 
-body {
-  padding-top: 80px;
-  text-decoration: none !important;
-  
+html, body { height: 100%; }
+
+.wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -50px;
 }
+
+.wrap > .container { padding-top: 100px; }
 
 /* footer */
 
-header, footer {
-  position: fixed;
+#push { height: 50px; }
+
+#footer {
+  position: relative;
+  height: 50px;
 }
 
-header { top: 0; padding-top: 10px;}
-footer { bottom: 0; }
-
-header a {
-
-  height: 20px;
-  overflow: auto;
-      
-  text-decoration: none;
-  color: #999;
-  font: 15px/1 Helvetica, Verdana, sans-serif;
-  text-transform: uppercase;
- 
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-  transition: all 0.5s ease
-}
-
-header a:hover {
-  color: #333;
-  text-decoration: none;
-}
- 
-ul {
+footer ul {
   overflow: auto;
   list-style-type: none;
   padding-right: 20px;
 }
 
-li {
+footer li {
   height: 20px;
   float: right;
   margin-left: 0px;
@@ -52,9 +34,9 @@ li {
   padding: 0 20px;
 }
 
-li:last-child { border-left: none; }
+footer li:last-child { border-left: none; }
 
-li a {
+footer li a {
   text-decoration: none;
   color: #999;
   font: 15px/1 Helvetica, Verdana, sans-serif;
@@ -67,18 +49,18 @@ li a {
   transition: all 0.5s ease;
 }
  
-li a:hover {
+footer li a:hover {
   color: #333;
 }
  
-li.active a {
+footer li.active a {
   font-weight: bold;
   color: #666;
 }
 
 /* fancy-line */
 
-.fancy-line-rtl { 
+.fancy-line { 
     display: block;
     border: none;
     color: white;
@@ -86,24 +68,4 @@ li.active a {
     margin: 10px 0;
     background: black;
     background: -webkit-gradient(radial, 100% 50%, 0, 50% 50%, 250, from(#000), to(#fff));
-}
-
-.fancy-line-ltr1 { 
-    display: block;
-    border: none;
-    color: white;
-    height: 1px;
-    margin: 10px 0;
-    background: black;
-    background: -webkit-gradient(radial, 0% 50%, 0, 50% 50%, 250, from(#000), to(#fff));
-}
-
-.fancy-line-ltr2 { 
-    display: block;
-    border: none;
-    color: white;
-    height: 1px;
-    margin: 10px 0;
-    background: black;
-    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#000), to(#fff));
 }

@@ -1,7 +1,7 @@
 <%= content_for :page_title, 'Sign in - Game Clips' %>
 
-<div class="row-fluid">
-  <div class="span4 well">
+<div class="row">
+  <div class="col-lg-4 well">
     <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
       <%= field_set_tag 'Sign in' do %>
         <%= f.label :email %>
@@ -14,7 +14,7 @@
           <div><%= f.label :remember_me %> <%= f.check_box :remember_me %></div>
         <% end -%>
 
-        <%= f.submit "Sign in" %>
+        <%= f.submit "Sign in" , class: "btn btn-success btn-primary"%>
       <% end %>
     <% end %>
   </div>

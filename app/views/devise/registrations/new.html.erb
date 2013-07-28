@@ -1,7 +1,7 @@
 <%= content_for :page_title, 'Sign up - Game Clips' %>
 
-<div class="row-fluid">
-  <div class="span4 well">
+<div class="row">
+  <div class="col-lg-4 well">
     <% resource.build_profile unless resource.profile %>
     <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :multipart => true }) do |f| %>
       <%= field_set_tag 'Sign up' do %>
@@ -19,7 +19,7 @@
         <%= f.submit "Sign up", class: "btn btn-success btn-primary" %>
       <% end %>
   </div>
-  <div class="span4 offset1 well"
+  <div class="col-lg-4 col-offset-1 well"
 
         <%= field_set_tag 'Profile (Optional)' do %>
           <%= f.fields_for :profile do |p| %>
