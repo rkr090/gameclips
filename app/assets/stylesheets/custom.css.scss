@@ -2,14 +2,14 @@
 
 html, body { height: 100%; }
 
+.wrap > .container { padding-top: 60px; }
+
 .wrap {
   min-height: 100%;
   height: auto !important;
   height: 100%;
   margin: 0 auto -50px;
 }
-
-.wrap > .container { padding-top: 100px; }
 
 /* footer */
 
@@ -68,4 +68,10 @@ footer li.active a {
     margin: 10px 0;
     background: black;
     background: -webkit-gradient(radial, 100% 50%, 0, 50% 50%, 250, from(#000), to(#fff));
+}
+
+#error_explanation {
+  @extend .alert;
+  @extend .alert-danger;
+  @extend .alert-block;
 }

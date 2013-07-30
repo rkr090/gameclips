@@ -1,20 +1,24 @@
 <%= content_for :page_title, 'Home - Game Clips' %>
 <% if user_signed_in? %>
   <div class="row">
-    <section class="col-lg-8">
-      <% current_user.screens.each do |scr| %>
-        <%= image_tag scr.image.url, :style => "width:400px; height:400px;" %>
-      <% end %>  
-    </section>
-    
-    <aside class="col-lg-4">
-      <%= current_user.profile.name %>
-      <%= image_tag current_user.profile.avatar.url(:thumb) %>
-    </aside>
-  </div>
+    <section class="col-lg-6">
+      <div class="page-header">
+        <%= link_to "Upload New Clip", '#collapse', id: "new-scr-button" ,class: "btn btn-primary btn-large" %>
+        <%= render :partial => 'screens/new', :locals => {:screen => Screen.new} %>
+      </div>
 
-  <div class="row pull-right">
-    <%= link_to "Upload Clip", new_screen_path, class: "btn btn-primary btn-large" %>
+      <div class="cycle-slideshow">
+        <% current_user.screens.each do |scr| %>
+          <%= image_tag scr.image.url, :style => "width:550px; height:350px;" %>
+        <% end %>
+      </div>
+    </section>
+ 
+    <aside class="col-lg-5 col-offset-1">
+      <div class="page-header">
+        <h3>What others are uploading</h3>
+      </div>
+    </aside>
   </div>
 <% else %>
   <div class="row">
