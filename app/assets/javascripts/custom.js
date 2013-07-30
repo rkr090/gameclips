@@ -1,7 +1,7 @@
 $(document).ready(function() {
-  $('#new-scr-form').hide();
+  $('#frm-collapse').hide();
 
-  $('#new-scr-button').click(function() {
-    $('#new-scr-form').toggle();
+  $('#frm-btn').click(function() {
+    $('#frm-collapse').toggle();
   });
 });
