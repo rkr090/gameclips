@@ -61,13 +61,13 @@ footer li.active a {
 /* fancy-line */
 
 .fancy-line { 
-    display: block;
-    border: none;
-    color: white;
-    height: 1px;
-    margin: 10px 0;
-    background: black;
-    background: -webkit-gradient(radial, 100% 50%, 0, 50% 50%, 250, from(#000), to(#fff));
+  display: block;
+  border: none;
+  color: white;
+  height: 1px;
+  margin: 10px 0;
+  background: black;
+  background: -webkit-gradient(radial, 100% 50%, 0, 50% 50%, 250, from(#000), to(#fff));
 }
 
 #error_explanation {
@@ -77,76 +77,56 @@ footer li.active a {
 }
 
 
-/*changes @vikash*/
+/* typography */
 
-
-/*typography change */
-body,legend,input[type="text"],input[type="email"],input[type="password"],
-{
-  color:#2c8ed1;
-}
-body{
-  
-  background:#F8F8F8 ;
-}
-legend
-{
-  
-  font-family: "Segoe UI",Helvetica Neue, Helvetica, Arial, sans-serif;
-}
-footer ul li a,a:hover
-{
-  color:#2c8ed1;
-
+body, legend, input[type="text"], input[type="email"], input[type="password"] {
+  color: #2c8ed1;
 }
 
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
+body { background: #F8F8F8; }
 
+footer ul li a, a:hover {
+  color: #2c8ed1;
+}
+
+h1, h2, h3, h4, h5, h6 {
   color:#2c8ed1;
   font-family: "Segoe UI",Helvetica Neue, Helvetica, Arial, sans-serif;
   font-weight: 500;
-  line-height: 1.1; }
+  line-height: 1.1;
+}
 
-  header footer
-  {
-
+header footer {
   color:#2c8ed1;
   font-family: "Segoe UI",Helvetica Neue, Helvetica, Arial, sans-serif;
-  }
-  .btn
-  {
+}
+
+.btn {
   border-radius:0px;
   margin-top:5px;
-  }
+}
 
-  
-  .navbar
-  {
+.navbar {
   background-color:white;
+}
 
-  }
-  .navbar-brand,.nav-brand:hover
-  {
-
+.navbar-brand, .nav-brand:hover {
   color:#2c8ed1;
   font-family: "Prime",Helvetica Neue, Helvetica, Arial, sans-serif;
   margin-left:10px;
   font-size:27px;
-  }
-
-
-.navbar-toggle,.navbar-toggle:hover, .navbar-toggle:focus {
-background-color:#2c8ed1;
 }
 
+.navbar-toggle, .navbar-toggle:hover, .navbar-toggle:focus {
+  background-color:#2c8ed1;
+}
 
 .modal-dialog {
-    left: 50%;
-    right: auto;
-    width: 350px;
-    margin-left: -180px;
-    margin-top:10%;
-    padding-top: 30px;
-    padding-bottom: 30px;
-     }
+  left: 50%;
+  right: auto;
+  width: 350px;
+  margin-left: -180px;
+  margin-top:10%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}

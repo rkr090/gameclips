@@ -1,7 +1,7 @@
 <%= content_for :page_title, 'Forgot password - Game Clips' %>
 
 <div class="row">
-  <div class="span4 well">
+  <div class="col-lg-4 well">
     <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
       <%= field_set_tag 'Forgot your password?' do %>
         <%= devise_error_messages! %>
@@ -9,7 +9,7 @@
         <div><%= f.label :email %><br />
         <%= f.email_field :email, :autofocus => true %></div>
 
-        <div><%= f.submit "Send me reset password instructions",class: "btn btn-primary btn-warning" %></div>
+        <div><%= f.submit "Send me reset password instructions", class: "btn btn-primary btn-warning" %></div>
       <% end %>
     <% end %>
   </div>
