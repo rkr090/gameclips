@@ -1,4 +1,14 @@
 <%= form_for screen, :html => {:id => 'new-scr-form'} do |f| %>
+  <% if screen.errors.any? %>
+    <div id="error_explanations">
+      <ul>
+        <% screen.errors.full_messages.each do |errmsg| %>
+          <li><% errmsg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
   <%= f.label :name %>
   <%= f.text_field :name, :placeholder => "Counter strike" %>
 

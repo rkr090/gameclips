@@ -7,4 +7,6 @@ class Screen < ActiveRecord::Base
   has_attached_file :image
   validates_with AttachmentPresenceValidator, :attributes => :image
   validates_with AttachmentContentTypeValidator, :attributes => :image, :content_type => /image/
+  validates_with AttachmentSizeValidator, :attributes => :image, :in => 0..3.megabytes,
+                                          :message => 'size limit is 3 MB'
 end
