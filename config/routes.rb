@@ -2,14 +2,15 @@ Gc::Application.routes.draw do
   devise_for :users, :controllers => { :registrations => "users/registrations" },
                      :path_names => { :sign_up => "register", :sign_in => "login", :sign_out => "logout" }
 
+  resources :users, only: [:show]
+  resources :screens, only: [:create]
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   root :to => 'high_voltage/pages#show', id: 'home'
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
-
-  resources :screens
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

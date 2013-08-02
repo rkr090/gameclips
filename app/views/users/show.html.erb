@@ -1,0 +1,23 @@
+<% if user_signed_in? %>
+  <div class="row">
+    <section class="col-lg-6">
+      <div class="page-header">
+        <%= link_to "Upload New Clip", '#upload', id: "frm-btn" ,class: "btn btn-primary btn-large" %>
+        <%= render :partial => 'screens/new', :locals => {:screen => Screen.new} %>
+      </div>
+
+      <div class="cycle-slideshow">
+        <% @user.screens.each do |scr| %>
+          <%= image_tag scr.image.url, :style => "width:550px; height:350px;" %>
+        <% end %>
+      </div>
+    </section>
+
+    <aside class="col-lg-5 col-offset-1">
+      <div class="page-header">
+        <h3>What others are uploading</h3>
+      </div>
+    </aside>
+  </div>
+<% end %>
+
