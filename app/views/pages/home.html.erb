@@ -16,11 +16,15 @@
       <div class="page-header">
         <h1>The stage is set!</h1>
       </div>
-      <%= render :partial => '/devise/registrations/new' %>
-      <%= link_to "Sign up", '#sign_up', id: "frm-btn", class: "btn btn-success" %> <h3>or</h3>
+      <% unless user_signed_in? %>
+      <div>
+        <%= render :partial => '/devise/registrations/new' %>
+        <%= link_to "Sign up", '#sign_up', id: "frm-btn", class: "btn btn-success" %> <h3>or</h3>
 
-      <%= link_to "Sign in", "#sign_in", class: "btn btn-primary", :data => {:toggle => "modal"} %>
-      <%= render :partial => '/devise/sessions/new' %>
+        <%= link_to "Sign in", "#sign_in", class: "btn btn-primary", :data => {:toggle => "modal"} %>
+        <%= render :partial => '/devise/sessions/new' %>
+      </div>
+      <% end %>  
     </section>
   </div>
 

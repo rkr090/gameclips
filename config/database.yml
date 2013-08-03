@@ -5,8 +5,8 @@ development:
   encoding: unicode
   database: gc_development
   pool: 5
-  username: rohit
-  password: th1sisjustaLongpassword
+  username:
+  password:
   host: localhost
 
 # Warning: The database defined as "test" will be erased and
@@ -17,8 +17,8 @@ test:
   encoding: unicode
   database: gc_test
   pool: 5
-  username: rohit
-  password: th1sisjustaLongpassword
+  username:
+  password:
   host: localhost
 
 production:
