@@ -1,0 +1,9 @@
+<% unless current_user.id.equal? params[:id].to_i %>
+  <div id="follow_form">
+  <% if current_user.following?(params[:id]) %>
+    <%= render 'unfollow' %>
+  <% else %>
+    <%= render 'follow' %>
+  <% end %>
+  </div>
+<% end %>

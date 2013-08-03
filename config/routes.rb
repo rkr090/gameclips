@@ -2,8 +2,14 @@ Gc::Application.routes.draw do
   devise_for :users, :controllers => { :registrations => "users/registrations" },
                      :path_names => { :sign_up => "register", :sign_in => "login", :sign_out => "logout" }
 
-  resources :users, only: [:show]
+  resources :users, only: [:show] do
+    member do
+      get :following, :followers
+    end
+  end
+
   resources :screens, only: [:create]
+  resources :relationships, only: [:create, :destroy]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

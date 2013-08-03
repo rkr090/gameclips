@@ -4,7 +4,16 @@
       <div class="page-header">
         <%= link_to "Upload New Clip", '#upload', id: "frm-btn" ,class: "btn btn-primary btn-large" %>
         <%= render :partial => 'screens/new', :locals => {:screen => Screen.new} %>
-      </div>
+
+        <div>
+          <%= link_to following_user_path(@user) do %>
+            <strong><%= @user.followed_users.count %>following</strong>
+          <% end %>
+          
+          <%= link_to followers_user_path(@user) do %>
+            <strong><%= @user.followers.count %>followers</strong>
+          <% end %>
+        <div><%= render 'follow_form' %></div>
 
       <div class="cycle-slideshow">
         <% @user.screens.each do |scr| %>
