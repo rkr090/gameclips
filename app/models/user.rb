@@ -28,4 +28,8 @@ class User < ActiveRecord::Base
   def unfollow!(other_user_id)
     relationships.find_by(followed_id: other_user_id).destroy!
   end
+
+  def feed
+    Screen.from_users_followed_by(self)
+  end
 end

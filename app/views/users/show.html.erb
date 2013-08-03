@@ -25,6 +25,9 @@
     <aside class="col-lg-5 col-offset-1">
       <div class="page-header">
         <h3>What your fellow gamers are uploading</h3>
+        <% @feed_items.each do |fi|%>
+          <%= image_tag fi.image.url(:midlarge) %>
+        <% end %>
       </div>
     </aside>
   </div>
