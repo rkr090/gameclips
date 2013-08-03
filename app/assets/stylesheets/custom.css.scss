@@ -8,7 +8,7 @@ html, body {
   border: 2px solid white;  
 }
 
-.wrap > .container { padding-top: 60px; }
+.wrap > .container { padding-top: 140px; }
 
 .wrap {
   min-height: 100%;
@@ -21,6 +21,11 @@ html, body {
 
 .navbar {
   background-color: white;
+}
+
+.navbar-fixed-top {
+  margin-top: 40px;
+  padding-top: 40px;
 }
 
 /* brand */
@@ -115,6 +120,8 @@ footer li.active a {
   background: black;
   background: -webkit-gradient(radial, 100% 50%, 0, 50% 50%, 250, from(#000), to(#fff));
 }
+
+/* tilt content */
 
 .tilt {
   -webkit-transition: all 0.5s ease;
