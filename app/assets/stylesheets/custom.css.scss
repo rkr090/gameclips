@@ -17,6 +17,12 @@ html, body {
   margin: 0 auto -50px;
 }
 
+/* header */
+
+.navbar {
+  background-color: white;
+}
+
 /* brand */
 
 .navbar-brand {
@@ -110,6 +116,22 @@ footer li.active a {
   background: -webkit-gradient(radial, 100% 50%, 0, 50% 50%, 250, from(#000), to(#fff));
 }
 
+.tilt {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+   transition: all 0.5s ease;
+}
+ 
+.tilt:hover {
+  -webkit-transform: rotate(-10deg);
+  -moz-transform: rotate(-10deg);
+  -o-transform: rotate(-10deg);
+  -ms-transform: rotate(-10deg);
+   transform: rotate(-10deg);
+}
+
 /* errors */
 
 #error_explanation {
@@ -138,44 +160,33 @@ img {
 
 /* forms */
 
-input:focus {
+input, textarea {  
+  box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;  
+  -moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;  
+  -webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;  
+} 
+
+input:focus, textarea:focus {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 8px; 
   -webkit-transition: background-color 0.5s linear;
    background: #CCC;
 }
 
+.submit {  
+  background: #617798;  
+  border: 0;  
+  color: #FFFFFF;  
+  -webkit-border-radius: 5px;  
+  -moz-border-radius: 5px;  
+} 
+
 /* typography */
-
-body, legend, input[type="text"], input[type="email"], input[type="password"] {
-  color: #2c8ed1;
-}
-
-footer ul li a, a:hover {
-  color: #2c8ed1;
-}
 
 h1, h2, h3, h4, h5, h6 {
   color:#2c8ed1;
   font-family: "Segoe UI",Helvetica Neue, Helvetica, Arial, sans-serif;
   font-weight: 500;
   line-height: 1.1;
-}
-
-footer {
-  color:#2c8ed1;
-  font-family: "Segoe UI",Helvetica Neue, Helvetica, Arial, sans-serif;
-}
-
-.btn {
-  border-radius:0px;
-  margin-top:5px;
-}
-
-.navbar {
-  background-color:white;
-}
-
-.navbar-toggle, .navbar-toggle:hover, .navbar-toggle:focus {
-  background-color:#2c8ed1;
 }
 
 .modal-dialog {
