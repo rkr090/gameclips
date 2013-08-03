@@ -8,7 +8,7 @@
 
       <div class="cycle-slideshow">
         <% @user.screens.each do |scr| %>
-          <%= image_tag scr.image.url, :style => "width:550px; height:350px;" %>
+          <%= image_tag scr.image.url(:midlarge) %>
         <% end %>
       </div>
     </section>

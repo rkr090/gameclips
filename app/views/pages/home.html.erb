@@ -7,7 +7,7 @@
 
       <div class="cycle-slideshow">
         <% latest_screens.each do |ls| %>
-        <%= image_tag ls.image.url, :style => "width:500px; height:400px;" %>
+        <%= image_tag ls.image.url(:midlarge) %>
         <% end %>
       </div>
     </section>
@@ -17,13 +17,13 @@
         <h1>The stage is set!</h1>
       </div>
       <% unless user_signed_in? %>
-      <div>
-        <%= render :partial => '/devise/registrations/new' %>
-        <%= link_to "Sign up", '#sign_up', id: "frm-btn", class: "btn btn-success" %> <h3>or</h3>
+        <div>
+          <%= render :partial => '/devise/registrations/new' %>
+          <%= link_to "Sign up", '#sign_up', id: "frm-btn", class: "btn btn-success" %> <h3>or</h3>
 
-        <%= link_to "Sign in", "#sign_in", class: "btn btn-primary", :data => {:toggle => "modal"} %>
-        <%= render :partial => '/devise/sessions/new' %>
-      </div>
+          <%= link_to "Sign in", "#sign_in", class: "btn btn-primary", :data => {:toggle => "modal"} %>
+          <%= render :partial => '/devise/sessions/new' %>
+        </div>
       <% end %>  
     </section>
   </div>
