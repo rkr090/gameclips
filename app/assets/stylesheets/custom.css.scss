@@ -1,6 +1,12 @@
 @import "bootstrap";
 
-html, body { height: 100%; }
+/* global */
+
+html, body { 
+  height: 100%;
+  background: #666;
+  border: 2px solid white;  
+}
 
 .wrap > .container { padding-top: 60px; }
 
@@ -9,6 +15,40 @@ html, body { height: 100%; }
   height: auto !important;
   height: 100%;
   margin: 0 auto -50px;
+}
+
+/* brand */
+
+.navbar-brand {
+  color: #EEEEE7;
+  font-size: 20px;
+}
+
+header a {
+  color: #000;   
+  background: #4A7B6F;    
+  padding: 5px;   
+  -webkit-border-radius: 5px;   
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  
+  -webkit-transition-property: color, background;   
+  -webkit-transition-duration: 1s, 1s;   
+  -webkit-transition-timing-function: linear, ease-in;  
+}
+
+.shadow {
+  -moz-box-shadow:    3px 3px 5px 6px #ccc;
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+  box-shadow:         3px 3px 5px 6px #ccc;
+}
+
+/* box */
+
+.box {
+  background: #e3e3e3;  
+  background: -moz-linear-gradient(top, #a4a4a4, #e3e3e3);  
+  background: -webkit-gradient(linear, left top, left bottombottom, from(#a4a4a4), to(#e3e3e3)); 
 }
 
 /* footer */
@@ -41,12 +81,12 @@ footer li a {
   color: #999;
   font: 15px/1 Helvetica, Verdana, sans-serif;
   text-transform: uppercase;
- 
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+
+  -webkit-transition: all 1s ease-in;
+  -moz-transition: all 1s ease-in;
+  -o-transition: all 1s ease-in;
+  -ms-transition: all 1s ease-in;
+  transition: all 1s ease-in;
 }
  
 footer li a:hover {
@@ -96,13 +136,18 @@ img {
      max-width: 100%;
 }
 
+/* forms */
+
+input:focus {
+  -webkit-transition: background-color 0.5s linear;
+   background: #CCC;
+}
+
 /* typography */
 
 body, legend, input[type="text"], input[type="email"], input[type="password"] {
   color: #2c8ed1;
 }
-
-body { background: #F8F8F8; }
 
 footer ul li a, a:hover {
   color: #2c8ed1;
@@ -115,7 +160,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.1;
 }
 
-header footer {
+footer {
   color:#2c8ed1;
   font-family: "Segoe UI",Helvetica Neue, Helvetica, Arial, sans-serif;
 }
@@ -127,13 +172,6 @@ header footer {
 
 .navbar {
   background-color:white;
-}
-
-.navbar-brand, .nav-brand:hover {
-  color:#2c8ed1;
-  font-family: "Prime",Helvetica Neue, Helvetica, Arial, sans-serif;
-  margin-left:10px;
-  font-size:27px;
 }
 
 .navbar-toggle, .navbar-toggle:hover, .navbar-toggle:focus {
