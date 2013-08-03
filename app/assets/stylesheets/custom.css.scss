@@ -78,6 +78,8 @@ footer li.active a {
   @extend .alert-block;
 }
 
+/* vertical spacing */
+
 .spacer {
  height: 200px;
  width: 100%;
@@ -86,6 +88,12 @@ footer li.active a {
  padding: 0;
  border: 0;
  display: block;
+}
+
+/* fluid images */
+
+img {
+     max-width: 100%;
 }
 
 /* typography */
