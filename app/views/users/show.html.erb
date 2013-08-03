@@ -7,11 +7,11 @@
 
         <div>
           <%= link_to following_user_path(@user) do %>
-            <strong><%= @user.followed_users.count %>following</strong>
+            <strong id="following"><%= @user.followed_users.count %>following</strong>
           <% end %>
           
           <%= link_to followers_user_path(@user) do %>
-            <strong><%= @user.followers.count %>followers</strong>
+            <strong id="followers"><%= @user.followers.count %>followers</strong>
           <% end %>
         <div><%= render 'follow_form' %></div>
 
@@ -24,7 +24,7 @@
 
     <aside class="col-lg-5 col-offset-1">
       <div class="page-header">
-        <h3>What others are uploading</h3>
+        <h3>What your fellow gamers are uploading</h3>
       </div>
     </aside>
   </div>
