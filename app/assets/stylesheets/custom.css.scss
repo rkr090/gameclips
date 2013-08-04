@@ -217,6 +217,28 @@ input:invalid:not([type=submit]), textarea:invalid:not([type=submit]) {
   -moz-border-radius: 5px;  
 }
 
+/* polaroid image */
+
+.polaroid {
+  position: relative;
+}
+ 
+.polaroid img {
+  border: 10px solid #fff;
+  border-bottom: 45px solid #fff;
+  -webkit-box-shadow: 3px 3px 3px #777;
+     -moz-box-shadow: 3px 3px 3px #777;
+          box-shadow: 3px 3px 3px #777;
+}
+ 
+.polaroid p {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  bottom: 0px;
+  color: #888;
+}
+
 /* sign_in modal window */ 
 
 .modal-dialog {

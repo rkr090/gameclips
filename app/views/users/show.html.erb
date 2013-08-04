@@ -15,8 +15,9 @@
           <% end %>
         <div><%= render 'follow_form' %></div>
 
-      <div class="cycle-slideshow">
+      <div class="polaroid">
         <% @user.screens.each do |scr| %>
+          <%= content_tag(:p, scr.name) %>
           <%= image_tag scr.image.url(:midlarge) %>
         <% end %>
       </div>
