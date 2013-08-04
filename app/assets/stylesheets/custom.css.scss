@@ -5,8 +5,7 @@
 html, body { 
   font-family: 'Oxygen', Arial, Helvetica, sans-serif; 
   height: 100%;
-  background: #666;
-  border: 2px solid white;  
+  background: white;
 }
 
 .wrap > .container { padding-top: 140px; }
@@ -18,14 +17,10 @@ html, body {
   margin: 0 auto -50px;
 }
 
-/* typography */
-
-h1, h2, h3, h4, h5, h6 { color: #2c8ed1; }
-
 /* header */
 
 .navbar {
-  background-color: white;
+  background-color: #3f608c;
 }
 
 .navbar-fixed-top {
@@ -33,16 +28,23 @@ h1, h2, h3, h4, h5, h6 { color: #2c8ed1; }
   padding-top: 40px;
 }
 
+header {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=80);
+  -moz-opacity: 0.80;
+  -khtml-opacity: 0.8;
+  opacity: 0.8;
+}
+
 /* brand */
 
 .navbar-brand {
-  color: #EEEEE7;
-  font-size: 20px;
+  float: left;
+  margin-bottom: -10px;
 }
 
 header a {
-  color: #000;   
-  background: #4A7B6F;    
+  background: #7fa2c7;    
   padding: 5px;   
   -webkit-border-radius: 5px;   
   -moz-border-radius: 5px;
@@ -62,9 +64,12 @@ header a {
 /* box */
 
 .box {
-  background: #e3e3e3;  
-  background: -moz-linear-gradient(top, #a4a4a4, #e3e3e3);  
-  background: -webkit-gradient(linear, left top, left bottombottom, from(#a4a4a4), to(#e3e3e3)); 
+  border: 1px solid #e3e3e3;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background-color: #b7db40;
+
 }
 
 /* footer */
@@ -80,6 +85,7 @@ footer ul {
   overflow: auto;
   list-style-type: none;
   padding-right: 20px;
+  padding-top: 20px;
 }
 
 footer li {
@@ -93,9 +99,8 @@ footer li {
 footer li:last-child { border-left: none; }
 
 footer li a {
-  text-decoration: none;
+  text-decoration: none !important;
   color: #999;
-  font: 15px/1 Helvetica, Verdana, sans-serif;
   text-transform: uppercase;
 
   -webkit-transition: all 1s ease-in;
@@ -185,19 +190,17 @@ input:not([type=submit]), textarea:not([type=submit]) {
 input:focus, textarea:focus {
   -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 8px; 
   -webkit-transition: background-color 0.5s linear;
-  background: #CCC;
   background-position: 110% center;
   background-repeat: no-repeat;
 }
 
 input:valid:not([type=submit]), textarea:valid:not([type=submit]) {
   background-position: 98% center;
-  background-color: #7d996e;
-  border: 1px solid #95bc7d;
+  background-color: #25aac2;
 }
 
 input:invalid:not([type=submit]), textarea:invalid:not([type=submit]) {
-   background-color: #ffdddd;
+
 }
 
 ::-webkit-input-placeholder { color: #aaafbd; font-style: italic; }
@@ -207,9 +210,9 @@ input:invalid:not([type=submit]), textarea:invalid:not([type=submit]) {
 
 
 .submit {  
-  background: #617798;  
+  background: #25aac2;  
   border: 0;  
-  color: #FFFFFF;  
+  color: white;
   -webkit-border-radius: 5px;  
   -moz-border-radius: 5px;  
 }

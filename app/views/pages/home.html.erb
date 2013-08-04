@@ -1,25 +1,19 @@
 <%= content_for :page_title, 'Home - Game Clips' %>
   <div class="row">
     <section class="col-lg-5 col-offset-1">
-      <div class="page-header">
-        <h1>Latest Clips</h1>
-      </div>
+      <h1>Latest Clips</h1>
 
-      <div class="cycle-slideshow">
-        <% latest_screens.each do |ls| %>
-        <%= image_tag ls.image.url(:midlarge) %>
-        <% end %>
+      <div class="cycle-slideshow tilt">
+        <%= image_tag "home.jpg" %>
       </div>
     </section>
     
     <section class="col-lg-4 col-offset-2">
-      <div class="page-header">
-        <h1>The stage is set!</h1>
-      </div>
+      <h1>The stage is set!</h1>
       <% unless user_signed_in? %>
         <div>
           <%= render :partial => '/devise/registrations/new' %>
-          <%= link_to "Sign up", '#sign_up', id: "sign_up_btn", class: "btn btn-success" %> <h3>or</h3>
+          <%= link_to "Sign up", '#sign_up', id: "sign_up_btn", class: "btn btn-primary" %> <h3>or</h3>
 
           <%= link_to "Sign in", "#sign_in", class: "btn btn-primary", :data => {:toggle => "modal"} %>
           <%= render :partial => '/devise/sessions/new' %>
@@ -32,12 +26,10 @@
     <div class="spacer"></div>
   </div>
 
-  <div class="row box">
+  <div class="row">
     <aside class="col-lg-5 col-offset-1">
-      <div class="page-header">
-        <h1>Follow other gamers.</h1>
-        <h1>Make connections</h1>  
-      </div>
+      <h1>Follow other gamers.</h1>
+      <h1>Make connections</h1>  
     </aside>    
   </div>
 
@@ -47,8 +39,6 @@
 
   <div class="row">
     <aside class="col-lg-5 col-offset-7">
-      <div class="page-header">
-        <h1>Create gaming events</h1>
-      </div>
+      <h1>Create gaming events</h1>
     </aside>
   </div>
