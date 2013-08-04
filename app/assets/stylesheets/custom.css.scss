@@ -3,6 +3,7 @@
 /* global */
 
 html, body { 
+  font-family: 'Oxygen', Arial, Helvetica, sans-serif; 
   height: 100%;
   background: #666;
   border: 2px solid white;  
@@ -16,6 +17,10 @@ html, body {
   height: 100%;
   margin: 0 auto -50px;
 }
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 { color: #2c8ed1; }
 
 /* header */
 
@@ -167,17 +172,39 @@ img {
 
 /* forms */
 
-input, textarea {  
+input:not([type=submit]), textarea:not([type=submit]) {  
   box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;  
   -moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;  
   -webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;  
+
+  background-image: url('checkmark.png') !important;
+  background-position: 110% center;
+  background-repeat: no-repeat;
 } 
 
 input:focus, textarea:focus {
   -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 8px; 
   -webkit-transition: background-color 0.5s linear;
-   background: #CCC;
+  background: #CCC;
+  background-position: 110% center;
+  background-repeat: no-repeat;
 }
+
+input:valid:not([type=submit]), textarea:valid:not([type=submit]) {
+  background-position: 98% center;
+  background-color: #7d996e;
+  border: 1px solid #95bc7d;
+}
+
+input:invalid:not([type=submit]), textarea:invalid:not([type=submit]) {
+   background-color: #ffdddd;
+}
+
+::-webkit-input-placeholder { color: #aaafbd; font-style: italic; }
+:-moz-placeholder { color: #aaafbd; font-style: italic; }
+::-moz-placeholder { color: #aaafbd; font-style: italic; }
+:-ms-input-placeholder { color: #aaafbd; font-style: italic; }
+
 
 .submit {  
   background: #617798;  
@@ -185,16 +212,9 @@ input:focus, textarea:focus {
   color: #FFFFFF;  
   -webkit-border-radius: 5px;  
   -moz-border-radius: 5px;  
-} 
-
-/* typography */
-
-h1, h2, h3, h4, h5, h6 {
-  color:#2c8ed1;
-  font-family: "Segoe UI",Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-weight: 500;
-  line-height: 1.1;
 }
+
+/* sign_in modal window */ 
 
 .modal-dialog {
   left: 50%;

@@ -5,7 +5,7 @@
         <h1>Latest Clips</h1>
       </div>
 
-      <div class="cycle-slideshow tilt">
+      <div class="cycle-slideshow">
         <% latest_screens.each do |ls| %>
         <%= image_tag ls.image.url(:midlarge) %>
         <% end %>

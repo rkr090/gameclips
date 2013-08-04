@@ -12,10 +12,10 @@
                <%= field_set_tag 'Sign in' do %>
 
                  <%= f.label :email %>
-                 <%= f.email_field :email, :autofocus => true %>
+                 <%= f.email_field :email, :autofocus => true, :required => true %>
 
                  <%= f.label :password %>
-                 <%= f.password_field :password %>
+                 <%= f.password_field :password, :required => true %>
 
                  <% if devise_mapping.rememberable? -%>
                    <div><%= f.label :remember_me %> <%= f.check_box :remember_me %></div>
