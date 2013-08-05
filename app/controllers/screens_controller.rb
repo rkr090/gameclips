@@ -5,10 +5,11 @@ class ScreensController < ApplicationController
     @user = current_user
     @screen = @user.screens.build( screen_params )
     if @screen.save
-      flash.now[:success] = "Upload Successfull"
-      render 'pages/home' 
+      flash[:success] = "Upload Successfull"
+      redirect_to current_user
     else
-      render 'pages/home' 
+      flash[:error] = "Upload Failed"
+      redirect_to current_user 
     end
   end
 
