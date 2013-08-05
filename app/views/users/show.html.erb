@@ -1,19 +1,26 @@
 <% if user_signed_in? %>
   <div class="row">
-    <section class="col-lg-6">
-      <div class="page-header">
-        <%= link_to "Upload New Clip", '#upload', id: "screen_up_btn" ,class: "btn btn-primary btn-large" %>
-        <%= render :partial => 'screens/new', :locals => {:screen => Screen.new} %>
-
-        <div>
-          <%= link_to following_user_path(@user) do %>
-            <strong id="following"><%= @user.followed_users.count %>following</strong>
-          <% end %>
+    <aside class="col-lg-4">
+      <div data-spy="affix" data-offset-top="140">
+        <div class="box">
+        <%= link_to following_user_path(@user) do %>
+          <strong id="following"><%= @user.followed_users.count %> FOLLOWING</strong>
+        <% end %>
           
-          <%= link_to followers_user_path(@user) do %>
-            <strong id="followers"><%= @user.followers.count %>followers</strong>
-          <% end %>
+        <%= link_to followers_user_path(@user) do %>
+          <strong id="followers"><%= @user.followers.count %> FOLLOWERS</strong>
+        <% end %>
+        </div>
         <div><%= render 'follow_form' %></div>
+
+       <h3>About Me</h3>
+       <h3>Game Events</h3>
+      </div>
+    </aside>
+
+    <section class="col-lg-5 col-offset-1">
+      <%= link_to "Upload New Clip", '#upload', id: "screen_up_btn" ,class: "btn btn-primary btn-large" %>
+      <%= render :partial => 'screens/new', :locals => {:screen => Screen.new} %>
 
       <div class="polaroid">
         <% @user.screens.each do |scr| %>
@@ -21,16 +28,14 @@
           <%= image_tag scr.image.url(:midlarge) %>
         <% end %>
       </div>
-    </section>
-
-    <aside class="col-lg-5 col-offset-1">
-      <div class="page-header">
-        <h3>What your fellow gamers are uploading</h3>
-        <% @feed_items.each do |fi|%>
-          <%= image_tag fi.image.url(:midlarge) %>
-        <% end %>
+      
+      <div class="row">
+          <h3>What your fellow gamers are uploading</h3>
+          <% @feed_items.each do |fi|%>
+            <%= image_tag fi.image.url(:midlarge) %>
+          <% end %>
       </div>
-    </aside>
+    </section>
   </div>
 <% end %>
 

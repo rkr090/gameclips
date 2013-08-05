@@ -61,17 +61,6 @@ header a {
   box-shadow:         3px 3px 5px 6px #ccc;
 }
 
-/* box */
-
-.box {
-  border: 1px solid #e3e3e3;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  background-color: #b7db40;
-
-}
-
 /* footer */
 
 #push { height: 50px; }
@@ -249,4 +238,21 @@ input:invalid:not([type=submit]), textarea:invalid:not([type=submit]) {
   margin-top:10%;
   padding-top: 30px;
   padding-bottom: 30px;
+}
+
+/* box */
+
+.box {
+  padding: 20px;
+  margin-top: 20px;
+  height: 50px;
+  border: 1px solid #e3e3e3;
+}
+
+#following {
+  float: left;
+}
+
+#followers {
+  float: right;
 }
