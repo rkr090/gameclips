@@ -1,0 +1,22 @@
+<%= form_for @profile, :html => { :multipart => true } do |f| %>
+  <% if @profile.errors.any? %>
+    <div id="error_explanations">
+      <ul>
+        <% @profile.errors.full_messages.each do |errmsg| %>
+          <li><% errmsg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name, :placeholder => "John Doe" %>
+
+  <%= f.label :hardware %>
+  <%= f.text_area :hardware %>
+
+  <%= f.label :avatar %>
+  <%= f.file_field :avatar %>
+
+  <%= f.submit "Upload", class: "btn btn-primary btn-small" %>
+<% end %>

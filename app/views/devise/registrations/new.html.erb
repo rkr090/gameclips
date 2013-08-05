@@ -19,23 +19,7 @@
         <%= f.submit "Sign up", class: "btn btn-success btn-primary" %>
       <% end %>
   </div>
-  <div class="col-lg-4 col-offset-1 well"
-
-        <%= field_set_tag 'Profile (Optional)' do %>
-          <%= f.fields_for :profile do |p| %>
-            <%= p.label :name %>
-            <%= p.text_field :name, :placeholder => "e.g John Doe" %>
-
-            <%= p.label :hardware %>
-            <%= p.text_area :hardware, :cols => "30", :rows => "4",
-                            :placeholder => "MSI GTX 580 (OC to 900Mhz) Intel i5-2500k (OC 3.8Ghz) 8GB Ram" %>
-
-            <%= p.label :avatar %>
-            <%= p.file_field :avatar %>
-          <% end %>
-        <% end %>
-  </div>   
-    <% end %>
+  <% end %>
 </div>
 
 <div class="row col-lg-2">

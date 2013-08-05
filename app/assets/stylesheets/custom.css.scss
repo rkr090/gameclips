@@ -258,10 +258,6 @@ input:invalid:not([type=submit]), textarea:invalid:not([type=submit]) {
   border: 1px solid #e3e3e3;
 }
 
-#following {
-  float: left;
-}
+#following { float: left; }
 
-#followers {
-  float: right;
-}
+#followers { float: right; }
