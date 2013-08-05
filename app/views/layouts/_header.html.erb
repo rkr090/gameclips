@@ -8,9 +8,9 @@
 
     <%= link_to "GAME CLIPS", root_path, class: "navbar-brand shadow", 'data-no-turbolink' => true %>    
   
-    <div class="nav-collapse collapse navbar-responsive-collapse">
+    <div class="nav-collapse collapse navbar-responsive-collapse pull-right">
       <% if user_signed_in? %>
-        <ul class="nav navbar-nav pull-right">
+        <ul class="nav navbar-nav">
           <%= link_to "Sign out", destroy_user_session_path, :method => :delete, class: "btn btn-primary navbar-btn" %>
           <%= link_to "Edit Profile", edit_user_registration_path, class: "btn btn-primary navbar-btn" %>
         </ul>
