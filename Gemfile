@@ -25,7 +25,6 @@ end
 gem 'high_voltage', '~> 1.2.0'
 gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass', branch: '3'
 gem 'devise', '3.0.0'
-gem 'cancan', '~> 1.6.0'
 gem 'paperclip', '~> 3.5.1'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
