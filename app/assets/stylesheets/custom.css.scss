@@ -29,11 +29,7 @@ html, body {
 }
 
 header {
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-  filter: alpha(opacity=80);
-  -moz-opacity: 0.80;
-  -khtml-opacity: 0.8;
-  opacity: 0.8;
+  @extend .opaq;
 }
 
 /* brand */
@@ -120,6 +116,16 @@ footer li.active a {
   background: -webkit-gradient(radial, 100% 50%, 0, 50% 50%, 250, from(#000), to(#fff));
 }
 
+/* opacity */
+
+.opaq {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=80);
+  -moz-opacity: 0.80;
+  -khtml-opacity: 0.8;
+  opacity: 0.8;
+}
+
 /* tilt content */
 
 .tilt {
@@ -185,7 +191,8 @@ input:focus, textarea:focus {
 
 input:valid:not([type=submit]), textarea:valid:not([type=submit]) {
   background-position: 98% center;
-  background-color: #25aac2;
+  background-color: #afeaaa;
+  @extend .opaq;
 }
 
 input:invalid:not([type=submit]), textarea:invalid:not([type=submit]) {
@@ -231,12 +238,14 @@ input:invalid:not([type=submit]), textarea:invalid:not([type=submit]) {
 /* sign_in modal window */ 
 
 .modal-dialog {
-  left: 50%;
-  right: auto;
-  width: 350px;
-  margin-left: -180px;
-  margin-top:10%;
-  padding-top: 30px;
+  width: 500px;
+  margin-left: -250px;
+  margin-top: 10%;
+}
+
+.modal-header {
+  background: url(modal-header.png);
+  border-bottom: 1px solid #CCC;
   padding-bottom: 30px;
 }
 

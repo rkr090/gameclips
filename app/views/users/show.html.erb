@@ -3,17 +3,17 @@
     <aside class="col-lg-4">
       <div data-spy="affix" data-offset-top="140">
         <div class="box">
-        <%= link_to following_user_path(@user) do %>
-          <strong id="following"><%= @user.followed_users.count %> FOLLOWING</strong>
-        <% end %>
+          <%= link_to following_user_path(@user) do %>
+            <strong id="following"><%= @user.followed_users.count %> FOLLOWING</strong>
+          <% end %>
           
-        <%= link_to followers_user_path(@user) do %>
-          <strong id="followers"><%= @user.followers.count %> FOLLOWERS</strong>
-        <% end %>
+          <%= link_to followers_user_path(@user) do %>
+            <strong id="followers"><%= @user.followers.count %> FOLLOWERS</strong>
+          <% end %>
         </div>
-        <div><%= render 'follow_form' %></div>
 
-       <h3>About Me</h3>
+       <h3>About Me</h3><%= render 'follow_form' %>
+
        <h3>Game Events</h3>
       </div>
     </aside>
