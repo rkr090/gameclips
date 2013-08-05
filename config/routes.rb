@@ -8,7 +8,7 @@ Gc::Application.routes.draw do
     end
   end
 
-  resources :profiles
+  resources :profiles, only: [:new, :create]
   resources :screens, only: [:create]
   resources :relationships, only: [:create, :destroy]
 
