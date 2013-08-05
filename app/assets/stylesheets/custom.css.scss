@@ -238,9 +238,10 @@ input:invalid:not([type=submit]), textarea:invalid:not([type=submit]) {
 /* sign_in modal window */ 
 
 .modal-dialog {
-  width: 500px;
-  margin-left: -250px;
+  width: 420px;
+  margin-left: -210px;
   margin-top: 10%;
+  left: 50%;
 }
 
 .modal-header {
