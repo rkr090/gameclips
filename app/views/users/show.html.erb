@@ -14,7 +14,8 @@
 
          <h3>About Me</h3><%= render 'follow_form' %>
          <% if @user.profile %>
-           <h4><%= @user.profile.name %></h4>
+           <%= image_tag @user.profile.avatar.url(:thumb) %>
+           <%= @user.profile.name %>
          <% end %>
 
          <h3>Upcoming Events</h3>

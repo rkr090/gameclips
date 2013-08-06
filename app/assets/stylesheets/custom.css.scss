@@ -189,7 +189,7 @@ input:focus, textarea:focus {
   background-repeat: no-repeat;
 }
 
-input:valid:not([type=submit]), textarea:valid:not([type=submit]) {
+form#sign_up_form input:valid:not([type=submit]), form#sign_up_form textarea:valid:not([type=submit]) {
   background-position: 98% center;
   background-color: #afeaaa;
   @extend .opaq;
