@@ -17,6 +17,14 @@ html, body {
   margin: 0 auto -50px;
 }
 
+*,
+*:after,
+*::before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 /* header */
 
 .navbar {
@@ -66,42 +74,59 @@ header a {
   height: 50px;
 }
 
-footer ul {
-  overflow: auto;
-  list-style-type: none;
-  padding-right: 20px;
-  padding-top: 20px;
-}
-
-footer li {
-  height: 20px;
+nav a {
+  position: relative;
+  display: inline-block;
   float: right;
-  margin-left: 0px;
-  border-left: 1px solid #aaa;
-  padding: 0 20px;
-}
-
-footer li:last-child { border-left: none; }
-
-footer li a {
-  text-decoration: none !important;
-  color: #999;
+  margin: 15px 25px;
+  outline: none;
+  text-decoration: none;
   text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  text-shadow: 0 0 1px rgba(255,255,255,0.3);
+  font-size: 1.35em;
+}
 
-  -webkit-transition: all 1s ease-in;
-  -moz-transition: all 1s ease-in;
-  -o-transition: all 1s ease-in;
-  -ms-transition: all 1s ease-in;
-  transition: all 1s ease-in;
+nav a:hover,
+nav a:focus {
+  outline: none;
+  text-decoration: none;
 }
- 
-footer li a:hover {
-  color: #333;
+
+#footer-nav a::before,
+#footer-nav a::after {
+  display: inline-block;
+  opacity: 0;
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+  -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+  transition: transform 0.3s, opacity 0.2s;
 }
- 
-footer li.active a {
-  font-weight: bold;
-  color: #666;
+
+#footer-nav a::before {
+  margin-right: 10px;
+  content: '[';
+  -webkit-transform: translateX(20px);
+  -moz-transform: translateX(20px);
+  transform: translateX(20px);
+}
+
+#footer-nav a::after {
+  margin-left: 10px;
+  content: ']';
+  -webkit-transform: translateX(-20px);
+  -moz-transform: translateX(-20px);
+  transform: translateX(-20px);
+}
+
+#footer-nav a:hover::before,
+#footer-nav a:hover::after,
+#footer-nav a:focus::before,
+#footer-nav a:focus::after {
+  opacity: 1;
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  transform: translateX(0px);
 }
 
 /* fancy-line */
