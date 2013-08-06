@@ -1,6 +1,16 @@
 <% provide(:title, @title) %>
-<% if @users.any? %>
-  <% @users.each do |user| %>
-    <%= user.email %>
+<div class="row">
+  <aside class="col-lg-2">
+    <% if @users.any? %>
+      <% @users.each do |user| %>
+        <%= user.email %>
+  </aside>
+
+  <section class="col-lg-5 col-offset-1">
+      <% user.screens.each do |usr_scr| %>
+        <%= image_tag usr_scr.image.url(:midlarge) %>
+      <% end %>
+    <% end %>
   <% end %>
-<% end %>
+  </section>
+</div>

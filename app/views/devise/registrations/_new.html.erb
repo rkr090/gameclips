@@ -7,10 +7,10 @@
   <%= f.email_field :email, :autofocus => true, :placeholder => "user@example.com", :required => true %>
 
   <%= f.label :password %>
-  <%= f.password_field :password, :placeholder => "8 characters min", :required => true%>
+  <%= f.password_field :password, :placeholder => "8 characters min", :required => true %>
 
   <%= f.label :password_confirmation %>
-  <%= f.password_field :password_confirmation, :required => true %><br />
+  <%= f.password_field :password_confirmation, :placehoder => "same as above", :required => true %><br />
        
   <%= f.submit "Sign up", class: "btn submit" %>
 <% end %>

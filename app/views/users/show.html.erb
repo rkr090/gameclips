@@ -12,13 +12,13 @@
           <% end %>
         </div>
 
-       <h3>About Me</h3><%= render 'follow_form' %>
-       <% if @user.profile %>
-         <h4><%= @user.profile.name %></h4>
-       <% end %>
+         <h3>About Me</h3><%= render 'follow_form' %>
+         <% if @user.profile %>
+           <h4><%= @user.profile.name %></h4>
+         <% end %>
 
-       <h3>Game Events</h3>
-      </div>
+         <h3>Upcoming Events</h3>
+       </div>
     </aside>
 
     <section class="col-lg-5 col-offset-1">
