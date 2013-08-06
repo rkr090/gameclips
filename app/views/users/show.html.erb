@@ -1,7 +1,7 @@
 <% if user_signed_in? %>
   <div class="row">
     <aside class="col-lg-4">
-      <div data-spy="affix" data-offset-top="140">
+      <div>
         <div class="box">
           <%= link_to following_user_path(@user) do %>
             <strong id="following"><%= @user.followed_users.count %> FOLLOWING</strong>
@@ -26,19 +26,27 @@
       <%= link_to "Upload New Clip", '#upload', id: "screen_up_btn" ,class: "btn btn-primary btn-large" %>
       <%= render :partial => 'screens/new', :locals => {:screen => Screen.new} %>
 
+      <div class="spacer40"></div>
+
       <div class="polaroid">
         <% @user.screens.each do |scr| %>
           <%= content_tag(:p, scr.name) %>
           <%= image_tag scr.image.url(:midlarge) %>
         <% end %>
       </div>
-      
+
+      <div class="spacer40"></div>
+
       <div class="row">
+        <div class="col-lg-12">
           <h3>What your fellow gamers are uploading</h3>
           <% @feed_items.each do |fi|%>
             <%= image_tag fi.image.url(:midlarge) %>
           <% end %>
+        </div>
       </div>
+
+      <div class="spacer40"></div>
     </section>
   </div>
 <% end %>
