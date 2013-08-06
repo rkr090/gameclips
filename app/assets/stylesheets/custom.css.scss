@@ -250,6 +250,12 @@ input:invalid:not([type=submit]), textarea:invalid:not([type=submit]) {
   padding-bottom: 30px;
 }
 
+#following { float: left; }
+
+#followers { float: right; }
+
+#forgot_pass { padding-top: 10px;}
+
 /* box */
 
 .box {
@@ -258,7 +264,3 @@ input:invalid:not([type=submit]), textarea:invalid:not([type=submit]) {
   height: 50px;
   border: 1px solid #e3e3e3;
 }
-
-#following { float: left; }
-
-#followers { float: right; }
