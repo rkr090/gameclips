@@ -216,6 +216,11 @@ input:invalid:not([type=submit]), textarea:invalid:not([type=submit]) {
 ::-moz-placeholder { color: #aaafbd; font-style: italic; }
 :-ms-input-placeholder { color: #aaafbd; font-style: italic; }
 
+#profile_hardware::-webkit-input-placeholder::after {
+    display: block;
+    content: "Intel i5-2500k (OC 3.8Ghz)\A 8GB Ram";
+}
+
 
 .submit {  
   background: #25aac2;  
