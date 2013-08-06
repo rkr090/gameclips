@@ -6,6 +6,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
          
   has_one :profile
+  accepts_nested_attributes_for :profile
+
   has_many :screens
 
   has_many :relationships, foreign_key: "follower_id", dependent: :destroy

@@ -8,13 +8,19 @@ class Users::RegistrationsController < Devise::RegistrationsController
       new_profile_path
     end
 
+    def after_update_path_for(resource_or_scope)
+      user_path(current_user)
+    end
+
     def configure_permitted_parameters
       devise_parameter_sanitizer.for(:sign_up) do |u|
-        u.permit(:email, :password, :password_confirmation)
+         u.permit(:email, :password, :password_confirmation,
+-                 :profile_attributes => [:name, :hardware, :avatar])
       end
 
       devise_parameter_sanitizer.for(:account_update) do |u|
-        u.permit(:email, :password, :password_confirmation, :current_password)
+        u.permit(:email, :password, :password_confirmation, :current_password,
+                 :profile_attributes => [:name, :hardware, :avatar])
       end
     end
  
